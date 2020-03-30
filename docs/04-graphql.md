@@ -23,7 +23,7 @@ npm install --save-dev babel-plugin-import-graphql
 
 En nuestro archivo de `.babelrc` agregamos el plugin requerido, por lo cual nuestra configuración lucirá
 
-```
+```javascript
 {
   "presets": ["@babel/preset-env"],
   "plugins": [
@@ -54,13 +54,13 @@ Tanto el servidor como el playground vienen en la forma de un middleground de Ex
 
 Para inicializar el servidor de Apollo, agregaremos a nuestro index
 
-```
+```javascript
 import { ApolloServer, gql } from 'apollo-server-express';
 ```
 
 y lo uniremos con nuestra `app` de Express haciendo lo siguiente
 
-```
+```javascript
 const server = new ApolloServer({
   typeDefs: gql`
     type Query {
@@ -76,19 +76,19 @@ server.applyMiddleware({ app });
 
 Para implementar el playground, tenemos que requerir el middleware
 
-```
+```javascript
 import ExpressPlayground from 'graphql-playground-middleware-express';
 ```
 
 y definir el endpoint que va a responder a él, así como el endpoint donde responderá el API de Apollo
 
-```
+```javascript
 app.get('/playground', ExpressPlayground({ endpoint: '/graphql' }));
 ```
 
 De haberlo hecho correctamente, podremos ir a nuestra aplicación en la ruta `/playground`, en la cual debemos de ver el playground, y podemos hacer un query básico
 
-```
+```graphql
 {
   test
 }

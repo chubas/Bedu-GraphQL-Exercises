@@ -6,7 +6,8 @@
   "scripts": {
     "start": "node ./__build__",
     "build": "babel ./src -d ./__build__ -D -s",
-    "dev": "nodemon src/index.js"
+    "dev": "nodemon src/index.js",
+    "seed": "babel-node scripts/seed.js"
   },
   "author": "",
   "license": "ISC",

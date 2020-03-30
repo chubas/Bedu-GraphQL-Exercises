@@ -6,6 +6,8 @@ import mongoose from 'mongoose';
 import { ApolloServer, gql } from 'apollo-server-express';
 import ExpressPlayground from 'graphql-playground-middleware-express';
 
+import { Course } from './models/Course';
+
 const APP_MONGO_URI = process.env.APP_MONGO_URI;
 if (!APP_MONGO_URI) {
   throw 'Variable APP_MONGO_URI is not defined';
