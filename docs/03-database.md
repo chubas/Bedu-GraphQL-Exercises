@@ -84,7 +84,7 @@ APP_MONGO_URI=<conection-string>
 
 Y agregaremos a nuestro archivo de servidor
 
-```
+```javascript
 import 'dotenv/config';
 
 const APP_MONGO_URI = process.env.APP_MONGO_URI;
@@ -97,11 +97,11 @@ if (!APP_MONGO_URI) {
 
 Para probar la conexión exitosa, haremos esta conexión antes de iniciar nuestro servidor
 
-```
+```javascript
 import mongoose from 'mongoose';
 ```
 
-```
+```javascript
 mongoose.connect(APP_MONGO_URI, { useNewUrlParser: true }).then(() => {
   console.log('Connected to MongoDB');
   app.listen(8080, () => {

@@ -33,7 +33,7 @@ npm install --save express
 
 Una vez que tenemos instalado express, comenzaremos por crear un servidor básico de express. Crearemos un directorio `/src` y dentro de él, un archivo `index.js` con el siguiente contenido 
 
-```
+```javascript
 'use strict';
 
 const express = require('express');
