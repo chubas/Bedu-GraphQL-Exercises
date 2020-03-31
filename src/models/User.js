@@ -5,7 +5,7 @@ const UserSchema = new Schema({
   firstName: String,
   lastName: String,
   email: String,
-  dateBirth: String,
+  birthDate: String,
   password: String,
   courses: [{
     type: mongoose.Schema.Types.ObjectId,

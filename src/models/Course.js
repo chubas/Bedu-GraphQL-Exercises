@@ -3,6 +3,7 @@ import mongoose, { Schema } from 'mongoose';
 const CourseSchema = new Schema({
   name: String,
   description: String,
+  category: String,
   startsOn: Date,
   endsOn: Date
 }, {
