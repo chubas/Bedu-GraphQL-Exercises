@@ -15,7 +15,7 @@ Para nuestro ejercicio, comenzaremos por definir los modelos en Mongoose, dentro
 import mongoose, { Schema } from 'mongoose';
 
 const CourseSchema = new Schema({
-  name: String,
+  firstName: String,
   description: String,
   category: String,
   startDate: Date,

@@ -2,7 +2,7 @@ import mongoose, { Schema } from 'mongoose';
 import { CourseSchema } from './Course'
 
 const UserSchema = new Schema({
-  name: String,
+  firstName: String,
   lastName: String,
   email: String,
   dateBirth: String,
