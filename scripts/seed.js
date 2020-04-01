@@ -15,43 +15,43 @@ const seed = async () => {
     name: 'Backend Development',
     description: 'Learn Backend development using Express and GraphQL',
     category: 'Development',
-    startDate: '17-03-2020',
-    endDate: '02-04-2020'
+    startDate: '2020-17-03',
+    endDate: '2020-02-04'
   });
   const frontend = await Course.create({
     name: 'Frontend Development',
     description: 'learn Frontend development with React',
     category: 'Development',
-    startDate: '07-05-2020',
-    endDate: '28-05-2020'
+    startDate: '2020-07-05',
+    endDate: '2020-28-05'
   });
   const design = await Course.create({
     name: 'Web design',
     description: 'Learn Web design fundamentals: HTML & CSS',
     category: 'Design',
-    startDate: '24-03-2020',
-    endDate: '09-04-2020'
+    startDate: '2020-24-03',
+    endDate: '2020-09-04'
   });
 
   // Create User models
   const user1 = await User.create({
     firstName: 'Juan',
     lastName: 'Perez',
-    birthDate: '29-01-1998',
+    birthDate: '1998-29-01',
     email: 'juan@gmail.com',
     courses: [backend._id]
   });
   const user2 = await User.create({
     firstName: 'Maria',
     lastName: 'Lopez',
-    birthDate: '10-03-1993',
+    birthDate: '1993-10-03',
     email: 'maria@hotmail.com',
     courses: [backend._id, frontend._id]
   });
   const user3 = await User.create({
     firstName: 'Jorge',
     lastName: 'Hernandez',
-    birthDate: '07-11-1996',
+    birthDate: '1996-07-11',
     email: 'jorge@gmail.com',
     courses: [frontend._id, design._id]
   });
