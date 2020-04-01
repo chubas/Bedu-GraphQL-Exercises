@@ -14,10 +14,25 @@ import Course from '../models/Course';
 
 const Query = {
   courses: () => {
-    return Course.find();
+    return Course.find().exec();
   }
 }
 ```
+
+<details>
+  <summary><i>¿Qué hace el método <code>find</code>, y quién lo define?</i></summary> 
+  <br />
+  El método <code>find</code> es parte del API de Mongoose (https://mongoosejs.com/docs/queries.html) el cual define operaciones hacia nuestra base de datos, tanto de consulta como en este caso, así como de modificación o borrado.
+  En su forma más sencilla, <code>find</code> va a encontrar <i>todos</i> los documentos de nuestra base de datos (lo que generalmente no es recomendable, sino que más adelante tendremos que implementar filtros y paginación!)
+</details>
+<br />
+
+<details>
+  <summary><i>¿Qué es el método <code>exec</code>?</i></summary> 
+  <br />
+  Los queries en mongo son <i>concatenables</i>, es decir, podemos definir un query en secciones agregando filtros o modificadores por separado (por ejemplo, <code>User.find().</code>)
+</details>
+<br />
 
 Sencillo!
 
@@ -33,7 +48,7 @@ const Query = {
   ...,
 
   student: (_, { id }) => {
-    return User.findOne({ _id: id });
+    return User.findOne({ _id: id }).exec();
   }
 }
 ```
