@@ -1,0 +1,17 @@
+type Course {
+  _id: String,
+  name: String,
+  description: String,  
+  category: String,
+  startsOn: String,
+  endsOn: String
+}
+
+type User {
+  _id: String,
+  firstName: String!,
+  lastName: String!
+  email: String!,
+  birthDate: String!,
+  courses: [Course]!
+}

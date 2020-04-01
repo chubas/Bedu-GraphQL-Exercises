@@ -3,7 +3,8 @@
 import 'dotenv/config';
 import express from 'express';
 import mongoose from 'mongoose';
-import { ApolloServer, gql } from 'apollo-server-express';
+import { ApolloServer } from 'apollo-server-express';
+import schema from './schema';
 import ExpressPlayground from 'graphql-playground-middleware-express';
 
 import { Course } from './models/Course';
@@ -16,11 +17,7 @@ if (!APP_MONGO_URI) {
 const app = express();
 
 const server = new ApolloServer({
-  typeDefs: gql`
-    type Query {
-      test: String
-    }
-  `,
+  typeDefs: schema,
   resolvers: []
 });
 server.applyMiddleware({ app });
