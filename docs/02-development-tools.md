@@ -22,7 +22,7 @@ Para instalar Babel y las librerías auxiliares debemos de instalar los siguient
 </details>
 <br />
 
-También debemos de indicarle a babel los _presets_ que usaremos para nuestro proyecto. En el caso de nuesto proyecto, Babel provee un plugin que soporta ECMAscript 6 de manera inteligente, evitando que tengamos que instalar múltiples plugins y proveyendo un default completo de inicio. Escribiremos un archivo llamado `babelrc` con la siguiente configuración:
+También debemos de indicarle a babel los _presets_ que usaremos para nuestro proyecto. En el caso de nuesto proyecto, Babel provee un plugin que soporta ECMAscript 6 de manera inteligente, evitando que tengamos que instalar múltiples plugins y proveyendo un default completo de inicio. Escribiremos un archivo llamado `.babelrc` con la siguiente configuración:
 
 ```javascript
 {
