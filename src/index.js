@@ -5,6 +5,7 @@ import express from 'express';
 import mongoose from 'mongoose';
 import { ApolloServer } from 'apollo-server-express';
 import schema from './schema';
+import resolvers from './resolvers';
 import ExpressPlayground from 'graphql-playground-middleware-express';
 
 import { Course } from './models/Course';
@@ -18,7 +19,7 @@ const app = express();
 
 const server = new ApolloServer({
   typeDefs: schema,
-  resolvers: []
+  resolvers
 });
 server.applyMiddleware({ app });
 
