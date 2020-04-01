@@ -1,4 +1,4 @@
 type Query {
   courses: [Course]
-  user(id:String!): User
+  student(id:String!): User
 }
